@@ -1,7 +1,7 @@
-(function () {
+(() => {
   "use strict";
-  document.querySelectorAll("[data-print]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
+  document.querySelectorAll("[data-print]").forEach((btn) => {
+    btn.addEventListener("click", () => {
       window.print();
     });
   });
