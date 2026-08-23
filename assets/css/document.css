@@ -141,32 +141,170 @@ table.doc-table tr.section-row td {
 .field b { font-weight: 700; }
 .field .note { color: var(--doc-note); font-weight: 600; }
 
-.project {
-  padding: 14px 0 18px;
-  border-bottom: 1px dashed var(--doc-border);
+/* ---- プロジェクトカード ---- */
+.project-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--doc-border-strong);
+  border-radius: 12px;
+  padding: 20px 22px 22px;
+  margin: 0 0 22px;
   page-break-inside: avoid;
+  break-inside: avoid;
 }
-.project:last-child { border-bottom: none; }
-.project h3 {
-  font-size: 15px;
-  margin: 0 0 10px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid #9ca3af;
+.project-card--featured {
+  border-color: #67c9dd;
+  background: linear-gradient(180deg, #ecfeff 0%, #ffffff 18%);
+  box-shadow: 0 0 0 1px rgba(14, 116, 144, 0.08);
 }
-.project ul {
-  margin: 4px 0 8px;
-  padding-left: 20px;
-}
-.project ul li { margin-bottom: 5px; }
-.project .badge {
-  display: inline-block;
+.project-card__ribbon {
+  position: absolute;
+  top: -11px;
+  left: 22px;
+  background: var(--doc-accent);
+  color: #fff;
   font-size: 11px;
   font-weight: 700;
-  color: var(--doc-accent);
-  border: 1px solid var(--doc-accent);
+  letter-spacing: 0.04em;
+  padding: 3px 12px;
+  border-radius: 999px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.project-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.project-num {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1f2937;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.project-card--featured .project-num {
+  background: var(--doc-accent);
+}
+.project-card__title { flex: 1; min-width: 0; }
+.project-card__title h3 {
+  font-size: 15px;
+  margin: 2px 0 8px;
+  line-height: 1.5;
+}
+.meta-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--doc-border-strong);
+  color: var(--doc-text-dim);
+  background: #f8fafc;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.chip-period { background: #f3f4f6; }
+.chip-company { background: #eef2ff; color: #3730a3; border-color: #c7d2fe; }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 24px;
+  margin: 14px 0 12px;
+  padding: 12px 14px;
+  background: #f9fafb;
+  border-radius: 8px;
+  font-size: 12px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.info-grid .info-item { border-bottom: 1px dotted var(--doc-border); padding: 3px 0; }
+.info-grid .info-item b { color: var(--doc-text-dim); font-weight: 700; margin-right: 4px; }
+.info-grid .info-item .note { color: var(--doc-note); font-weight: 700; }
+
+.skill-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 4px; }
+.skill-chip {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: #eef6f8;
+  border: 1px solid #bfe3ea;
+  color: #0e7490;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.content-block h4, .result-box h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--doc-text-dim);
+  margin: 14px 0 6px;
+}
+.content-block ul {
+  margin: 0;
+  padding-left: 4px;
+  list-style: none;
+}
+.content-block ul li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 7px;
+}
+.content-block ul li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--doc-accent);
+}
+.content-block .badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 8px;
   border-radius: 4px;
-  padding: 1px 6px;
   margin-right: 6px;
+  vertical-align: 1px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.badge-main { background: #1f2937; color: #fff; }
+.badge-sub { background: #fff; color: #6b7280; border: 1px solid #9ca3af; }
+
+.result-box {
+  margin-top: 8px;
+  padding: 10px 14px;
+  background: #f0fdfa;
+  border-left: 3px solid var(--doc-accent);
+  border-radius: 4px;
+  font-size: 12.5px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.period-tail {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--doc-text-dim);
+  text-align: right;
 }
 
 .skill-table td:first-child { width: 22%; }
