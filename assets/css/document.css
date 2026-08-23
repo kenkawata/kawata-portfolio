@@ -1,0 +1,196 @@
+/* =========================================================
+   履歴書・職務経歴書 共通スタイル（白ベース／ブラウザ印刷でPDF化）
+   ========================================================= */
+
+:root {
+  --doc-text: #1f2430;
+  --doc-text-dim: #4b5264;
+  --doc-border: #d7dbe3;
+  --doc-border-strong: #b8bfcc;
+  --doc-bar: #1f2937;
+  --doc-bar-text: #ffffff;
+  --doc-bg-alt: #f3f4f6;
+  --doc-accent: #0e7490;
+  --doc-note: #b91c1c;
+  --doc-page-w: 210mm;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: #e9ebef;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  color: var(--doc-text);
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #111827;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.toolbar button, .toolbar a {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: #0e7490;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.toolbar button:hover, .toolbar a:hover { background: #0b5a72; transform: translateY(-1px); }
+.toolbar a.secondary { background: transparent; border-color: rgba(255,255,255,0.35); }
+.toolbar a.secondary:hover { background: rgba(255,255,255,0.08); }
+
+.page {
+  width: var(--doc-page-w);
+  min-height: 297mm;
+  margin: 24px auto;
+  padding: 16mm 15mm;
+  background: #ffffff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+.doc-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.3em;
+  margin: 0 0 6px;
+}
+.doc-date {
+  text-align: right;
+  font-size: 12.5px;
+  color: var(--doc-text-dim);
+  margin: 0 0 18px;
+}
+
+.doc-bar {
+  background: var(--doc-bar);
+  color: var(--doc-bar-text);
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 7px 14px;
+  margin: 22px 0 12px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+table.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 4px;
+}
+table.doc-table thead { display: table-header-group; }
+table.doc-table tr { break-inside: avoid; page-break-inside: avoid; }
+table.doc-table th, table.doc-table td {
+  border: 1px solid var(--doc-border-strong);
+  padding: 8px 12px;
+  vertical-align: middle;
+  text-align: left;
+}
+table.doc-table th {
+  background: var(--doc-bar);
+  color: var(--doc-bar-text);
+  font-weight: 700;
+  text-align: center;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+table.doc-table td.label {
+  background: var(--doc-bg-alt);
+  font-weight: 700;
+  text-align: center;
+  width: 26%;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+table.doc-table td.center { text-align: center; }
+table.doc-table tr.section-row td {
+  background: #e5e7eb;
+  font-weight: 700;
+  text-align: center;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.doc-p { margin: 0 0 12px; }
+.doc-p:last-child { margin-bottom: 0; }
+
+.field { margin: 3px 0; }
+.field b { font-weight: 700; }
+.field .note { color: var(--doc-note); font-weight: 600; }
+
+.project {
+  padding: 14px 0 18px;
+  border-bottom: 1px dashed var(--doc-border);
+  page-break-inside: avoid;
+}
+.project:last-child { border-bottom: none; }
+.project h3 {
+  font-size: 15px;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #9ca3af;
+}
+.project ul {
+  margin: 4px 0 8px;
+  padding-left: 20px;
+}
+.project ul li { margin-bottom: 5px; }
+.project .badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--doc-accent);
+  border: 1px solid var(--doc-accent);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-right: 6px;
+}
+
+.skill-table td:first-child { width: 22%; }
+
+.small-note {
+  font-size: 11.5px;
+  color: var(--doc-note);
+  margin: 6px 0 10px;
+}
+
+@media print {
+  html, body { background: #ffffff; }
+  .toolbar { display: none !important; }
+  .page {
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 12mm 14mm;
+    box-shadow: none;
+  }
+  .project { break-inside: avoid; }
+}
+
+@page {
+  size: A4;
+  margin: 10mm;
+}
