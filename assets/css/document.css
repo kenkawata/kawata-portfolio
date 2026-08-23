@@ -59,8 +59,8 @@ body {
   transition: background 0.15s ease, transform 0.15s ease;
 }
 .toolbar button:hover, .toolbar a:hover { background: #0b5a72; transform: translateY(-1px); }
-.toolbar a.secondary { background: transparent; border-color: rgba(255,255,255,0.35); }
-.toolbar a.secondary:hover { background: rgba(255,255,255,0.08); }
+.toolbar a.toolbar__link--secondary { background: transparent; border-color: rgba(255,255,255,0.35); }
+.toolbar a.toolbar__link--secondary:hover { background: rgba(255,255,255,0.08); }
 
 .page {
   width: var(--doc-page-w);
@@ -71,14 +71,14 @@ body {
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
 }
 
-.doc-title {
+.page__title {
   text-align: center;
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 0.3em;
   margin: 0 0 6px;
 }
-.doc-date {
+.page__date {
   text-align: right;
   font-size: 12.5px;
   color: var(--doc-text-dim);
@@ -117,7 +117,7 @@ table.doc-table th {
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
-table.doc-table td.label {
+table.doc-table td.doc-table__cell--label {
   background: var(--doc-bg-alt);
   font-weight: 700;
   text-align: center;
@@ -125,8 +125,8 @@ table.doc-table td.label {
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
-table.doc-table td.center { text-align: center; }
-table.doc-table tr.section-row td {
+table.doc-table td.doc-table__cell--center { text-align: center; }
+table.doc-table tr.doc-table__row--section td {
   background: #e5e7eb;
   font-weight: 700;
   text-align: center;
@@ -136,10 +136,6 @@ table.doc-table tr.section-row td {
 
 .doc-p { margin: 0 0 12px; }
 .doc-p:last-child { margin-bottom: 0; }
-
-.field { margin: 3px 0; }
-.field b { font-weight: 700; }
-.field .note { color: var(--doc-note); font-weight: 600; }
 
 /* ---- プロジェクトカード ---- */
 .project-card {
@@ -159,7 +155,7 @@ table.doc-table tr.section-row td {
   gap: 14px;
   margin-bottom: 14px;
 }
-.project-num {
+.project-card__num {
   flex: none;
   width: 32px;
   height: 32px;
@@ -174,16 +170,13 @@ table.doc-table tr.section-row td {
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
-.project-card--featured .project-num {
-  background: var(--doc-accent);
-}
 .project-card__title { flex: 1; min-width: 0; }
 .project-card__title h3 {
   font-size: 15px;
   margin: 2px 0 8px;
   line-height: 1.5;
 }
-.meta-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.project-card__meta-chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
   display: inline-block;
   font-size: 10.5px;
@@ -196,8 +189,8 @@ table.doc-table tr.section-row td {
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
-.chip-period { background: #f3f4f6; }
-.chip-company { background: #eef2ff; color: #3730a3; border-color: #c7d2fe; }
+.chip--period { background: #f3f4f6; }
+.chip--company { background: #eef2ff; color: #3730a3; border-color: #c7d2fe; }
 
 table.info-table {
   width: 100%;
@@ -214,7 +207,7 @@ table.info-table td {
   vertical-align: top;
   background: #ffffff;
 }
-table.info-table td.k {
+table.info-table td.info-table__cell--key {
   background: #eef6f8;
   color: var(--doc-accent);
   font-weight: 700;
@@ -224,12 +217,11 @@ table.info-table td.k {
   width: 1%;
   border-right: 1px solid var(--doc-border);
 }
-table.info-table td.v { border-right: 1px solid var(--doc-border); }
-table.info-table td.v:last-child, table.info-table td.k:last-child { border-right: none; }
-table.info-table .note { color: var(--doc-note); font-weight: 700; }
+table.info-table td.info-table__cell--value { border-right: 1px solid var(--doc-border); }
+table.info-table td.info-table__cell--value:last-child, table.info-table td.info-table__cell--key:last-child { border-right: none; }
 
-.skill-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 4px; }
-.skill-chip {
+.skill-chip-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 4px; }
+.skill-chip-list__item {
   font-size: 11px;
   font-weight: 600;
   padding: 3px 10px;
@@ -280,8 +272,8 @@ table.info-table .note { color: var(--doc-note); font-weight: 700; }
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
-.badge-main { background: #1f2937; color: #fff; }
-.badge-sub { background: #fff; color: #6b7280; border: 1px solid #9ca3af; }
+.badge--main { background: #1f2937; color: #fff; }
+.badge--sub { background: #fff; color: #6b7280; border: 1px solid #9ca3af; }
 
 .result-box {
   margin-top: 8px;
@@ -301,7 +293,7 @@ table.info-table .note { color: var(--doc-note); font-weight: 700; }
   text-align: right;
 }
 
-.skill-table td:first-child { width: 22%; }
+.doc-table--skills td:first-child { width: 22%; }
 
 .small-note {
   font-size: 11.5px;
@@ -311,7 +303,7 @@ table.info-table .note { color: var(--doc-note); font-weight: 700; }
 
 /* ---- 改ページ制御（画面表示・印刷どちらでも適用） ---- */
 .doc-bar,
-.doc-title,
+.page__title,
 .project h3,
 table.doc-table thead {
   break-after: avoid-page;

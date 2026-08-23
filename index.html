@@ -26,17 +26,17 @@
 <div class="bg-glow" aria-hidden="true"></div>
 
 <header class="site-header" id="top">
-  <div class="wrap header-inner">
-    <a class="brand" href="#top"><span class="brand-name">KAWATA<span class="brand-name-dim">.dev</span></span></a>
+  <div class="wrap site-header__inner">
+    <a class="site-header__brand" href="#top"><span class="site-header__brand-name">KAWATA<span class="site-header__brand-name-dim">.dev</span></span></a>
     <nav class="nav" id="nav">
       <a href="#about">Profile</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#works">Works</a>
       <a href="#career">Career</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#contact" class="nav__link--cta">Contact</a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <button class="nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -46,31 +46,30 @@
 
   <!-- HERO -->
   <section class="hero wrap">
-    <h1 class="hero-title hero-title-prose">
+    <h1 class="hero__title hero__title--prose">
       Webデザイナーからキャリアを開始し、現在は <strong>TypeScript</strong> を軸にしたWebシステム開発を
-      主軸にしつつ、案件に応じて <span class="grad">React・Next.js</span> によるモダンフロントエンド開発、前職では
+      主軸にしつつ、案件に応じて <span class="u-gradient-text">React・Next.js</span> によるモダンフロントエンド開発、前職では
       <strong>AWS・Matterport SDK</strong> を用いた3D空間Web連携まで手がけてきたエンジニアです。
     </h1>
-    <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">Projects を見る</a>
-      <a href="#contact" class="btn btn-ghost">Contact</a>
+    <div class="hero__actions">
+      <a href="#projects" class="btn btn--primary">Projects を見る</a>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="wrap">
-      <p class="section-kicker">01 / Profile</p>
-      <h2 class="section-title">Profile</h2>
-      <div class="about-grid">
-        <div class="about-text">
+      <p class="section__kicker">01 / Profile</p>
+      <h2 class="section__title">Profile</h2>
+      <div class="about__grid">
+        <div class="about__text">
           <p>
             2007年、Webデザイナー・コーダーとしてキャリアをスタート。ECサイトの構築や大学・医療機関等の公式サイトのレスポンシブコーディングを数多く手がけたのち、
             CakePHP / WordPress を用いたバックエンド連携・CMS構築へと領域を広げました。
           </p>
           <p>
-            前職の株式会社アクトキューブでは、<strong>Matterport SDK</strong> を用いた3D空間Webソリューション開発と、<strong>AWS（S3 / IAM 等）</strong> を
-            活用したクラウド基盤の構築・運用を担当。3D表現技術とクラウドインフラを一貫して手がけた、技術領域の広さを示す代表的な経験です。
+            株式会社アクトキューブでは、<strong>Matterport SDK / krpano</strong> を用いた3D空間Webソリューション開発と、<strong>AWS（S3 / IAM 等）</strong> を
+            活用したクラウド基盤の構築・運用を担当。3D表現技術とクラウドインフラを一貫して手がけた、技術領域の広さを示す代表的な経験です。2025年4月以降も業務委託としてプロジェクトを継続しています。
           </p>
           <p>
             現在は株式会社デジタル・デザイナーズ・スタジオにて、<strong>TypeScript / PHP（Smarty）/ Sass / Vite</strong> を中心としたWebシステムの
@@ -81,13 +80,14 @@
             導入案件にも柔軟かつ迅速に対応します。
           </p>
         </div>
-        <div class="about-card">
+        <div class="about__card">
           <h3>Basic Info</h3>
           <ul class="info-list">
             <li><span>Name</span><b>河田 健 / Ken Kawata</b></li>
             <li><span>Role</span><b>Webエンジニア / フロントエンドエンジニア</b></li>
-            <li><span>Main Stack</span><b>TypeScript / PHP(Smarty) / Sass / Vite</b></li>
-            <li><span>Also</span><b>React / Next.js（別案件）</b></li>
+            <li><span>Experience</span><b>Web業界 18年（デザイナー〜エンジニア）</b></li>
+            <li><span>Main Stack</span><b>TypeScript / PHP(Smarty) / Sass / Vite（別案件でReact / Next.js）</b></li>
+            <li><span>Highlight</span><b>Matterport SDK × AWS（前職実績）</b></li>
           </ul>
         </div>
       </div>
@@ -95,17 +95,17 @@
   </section>
 
   <!-- SKILLS -->
-  <section class="section alt" id="skills">
+  <section class="section section--alt" id="skills">
     <div class="wrap">
-      <p class="section-kicker">02 / Skills</p>
-      <h2 class="section-title">Skills &amp; Stack</h2>
-      <div class="skill-grid">
-        <div class="skill-card">
-          <h3><span class="skill-icon">◆</span>Frontend</h3>
-          <div class="tag-row">
-            <span class="tag tag-strong">TypeScript</span>
-            <span class="tag tag-strong">Sass / SCSS</span>
-            <span class="tag tag-strong">Vite</span>
+      <p class="section__kicker">02 / Skills</p>
+      <h2 class="section__title">Skills &amp; Stack</h2>
+      <div class="skills__grid">
+        <div class="skills__card">
+          <h3><span class="skills__icon">◆</span>Frontend</h3>
+          <div class="tag-list">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Sass / SCSS</span>
+            <span class="tag">Vite</span>
             <span class="tag">React（別案件）</span>
             <span class="tag">Next.js（別案件）</span>
             <span class="tag">JavaScript (ES6+)</span>
@@ -114,13 +114,13 @@
             <span class="tag">Tailwind CSS</span>
           </div>
         </div>
-        <div class="skill-card">
-          <h3><span class="skill-icon">◆</span>Cloud &amp; Backend</h3>
-          <div class="tag-row">
+        <div class="skills__card">
+          <h3><span class="skills__icon">◆</span>Cloud &amp; Backend</h3>
+          <div class="tag-list">
             <span class="tag">AWS S3</span>
             <span class="tag">AWS IAM</span>
             <span class="tag">Amazon CloudWatch Logs</span>
-            <span class="tag tag-strong">PHP / Smarty</span>
+            <span class="tag">PHP / Smarty</span>
             <span class="tag">PHP / CakePHP</span>
             <span class="tag">Java</span>
             <span class="tag">WordPress</span>
@@ -128,19 +128,20 @@
             <span class="tag">MySQL</span>
           </div>
         </div>
-        <div class="skill-card">
-          <h3><span class="skill-icon">◆</span>3D / Spatial Web</h3>
-          <div class="tag-row">
-            <span class="tag tag-strong">Matterport SDK</span>
+        <div class="skills__card">
+          <h3><span class="skills__icon">◆</span>3D / Spatial Web</h3>
+          <div class="tag-list">
+            <span class="tag">Matterport SDK</span>
+            <span class="tag">krpano</span>
             <span class="tag">WebGL</span>
             <span class="tag">3D空間データ連携</span>
             <span class="tag">WAI-ARIA</span>
           </div>
         </div>
-        <div class="skill-card">
-          <h3><span class="skill-icon">◆</span>Tooling &amp; Design</h3>
-          <div class="tag-row">
-            <span class="tag">Git / GitHub</span>
+        <div class="skills__card">
+          <h3><span class="skills__icon">◆</span>Tooling &amp; Design</h3>
+          <div class="tag-list">
+            <span class="tag">Git / GitHub / GitLab</span>
             <span class="tag">Webpack / Gulp</span>
             <span class="tag">Docker / MAMP</span>
             <span class="tag">VS Code / Mac OS</span>
@@ -156,14 +157,14 @@
   <!-- PROJECTS -->
   <section class="section" id="projects">
     <div class="wrap">
-      <p class="section-kicker">03 / Projects</p>
-      <h2 class="section-title">Featured Projects</h2>
+      <p class="section__kicker">03 / Projects</p>
+      <h2 class="section__title">Featured Projects</h2>
 
-      <div class="project-list">
+      <div class="projects__list">
 
         <article class="project-card">
-          <div class="project-media" data-tone="spa">
-            <svg class="project-media-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <div class="project-card__media" data-tone="spa">
+            <svg class="project-card__media-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="8" y="12" width="48" height="40" rx="4"></rect>
               <line x1="8" y1="22" x2="56" y2="22"></line>
               <circle cx="14" cy="17" r="1.4" fill="currentColor" stroke="none"></circle>
@@ -174,10 +175,10 @@
               <line x1="29" y1="30" x2="24" y2="44"></line>
             </svg>
           </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-period"><time datetime="2025-04">2025.04</time> – 現在</span>
-              <span class="project-company">株式会社デジタル・デザイナーズ・スタジオ</span>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__period"><time datetime="2025-04">2025.04</time> – 現在</span>
+              <span class="project-card__company">株式会社デジタル・デザイナーズ・スタジオ</span>
             </div>
             <h3>自社Webシステム開発・保守（TypeScript / PHP・Smarty / Sass / Vite）</h3>
             <p>
@@ -185,20 +186,20 @@
               ビルド環境構築を担当。Core Web Vitalsの改善やVite導入によるビルド高速化などにより、担当業務全体で初期表示速度を
               約35%高速化しました。
             </p>
-            <ul class="project-points">
+            <ul class="project-card__points">
               <li>TypeScript / PHP(Smarty) による既存Webシステムの開発・保守</li>
               <li>Sassによるスタイル設計、Viteを用いたビルド環境構築・高速化</li>
               <li>ESLint / Prettier によるコード標準化、レガシーコードのTypeScript段階的リプレイス</li>
             </ul>
-            <div class="tag-row">
+            <div class="tag-list">
               <span class="tag">TypeScript</span><span class="tag">PHP(Smarty)</span><span class="tag">Sass</span><span class="tag">Vite</span><span class="tag">Core Web Vitals</span>
             </div>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="project-media" data-tone="spa">
-            <svg class="project-media-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <div class="project-card__media" data-tone="spa">
+            <svg class="project-card__media-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polygon points="32 8 54 20 54 44 32 56 10 44 10 20"></polygon>
               <polygon points="32 8 54 20 32 32 10 20"></polygon>
               <line x1="32" y1="32" x2="32" y2="56"></line>
@@ -206,66 +207,72 @@
               <line x1="10" y1="20" x2="10" y2="44"></line>
             </svg>
           </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-period"><time datetime="2025-04">2025.04</time> – 現在</span>
-              <span class="project-company">株式会社デジタル・デザイナーズ・スタジオ（別プロジェクト）</span>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__period"><time datetime="2025-04">2025.04</time> – 現在</span>
+              <span class="project-card__company">株式会社デジタル・デザイナーズ・スタジオ（別プロジェクト）</span>
             </div>
             <h3>Next.js App Router によるモダンSPA新規開発</h3>
             <p>
               上記のメイン業務とは別のプロジェクトとして、TypeScript / Next.js（App Router）を用いた新規Webアプリケーションの
               コンポーネント設計と、共通UIライブラリの構築を担当しています。
             </p>
-            <ul class="project-points">
+            <ul class="project-card__points">
               <li>共通UIライブラリの設計・構築</li>
               <li>Figmaを用いたデザインシステム策定、REST / GraphQL APIとの連携設計</li>
             </ul>
-            <div class="tag-row">
+            <div class="tag-list">
               <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Figma</span><span class="tag">REST/GraphQL API</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card project-card-primary">
-          <div class="project-media project-media--img">
-            <img src="./assets/img/works/panoramas-jp.png" alt="360° Panorama Service" loading="lazy">
+        <article class="project-card project-card--primary">
+          <div class="project-card__media" data-tone="spatial">
+            <svg class="project-card__media-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="32 6 56 19 56 45 32 58 8 45 8 19"></polygon>
+              <polyline points="32 6 32 32 56 19"></polyline>
+              <line x1="32" y1="32" x2="32" y2="58"></line>
+              <line x1="32" y1="32" x2="8" y2="19"></line>
+            </svg>
           </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-period"><time datetime="2024-04">2024.04</time> – 現在</span>
-              <span class="project-company">株式会社アクトキューブ ／ panoramas.jp（360° Panorama Service）</span>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__period"><time datetime="2024-04">2024.04</time> – 現在（業務委託で継続中）</span>
+              <span class="project-card__company">株式会社アクトキューブ ／ panoramas.jp（360° Panorama Service）</span>
             </div>
-            <h3>Matterport SDK × AWS 3D空間Webソリューション「360°パノラマサービス」</h3>
+            <h3>Matterport SDK / krpano × AWS 3D空間Webソリューション「360°パノラマサービス」</h3>
             <p>
-              3Dデジタルツイン技術「Matterport SDK」を組み込んだ360°パノラマ空間ビューアのサービスサイトを開発。ブラウザ上で
-              3D空間モデルとインタラクティブUI（タグ・ポップアップ等）を動的連携させる空間Web機能や、CMS管理画面と連携した
+              3Dデジタルツイン技術「Matterport SDK」およびkrpanoエンジンを組み込んだ360°パノラマ空間ビューアのサービスサイトを開発。
+              ブラウザ上で3D空間モデルとインタラクティブUI（タグ・ポップアップ等）を動的連携させる空間Web機能や、CMS管理画面と連携した
               導入先ごとのコンテンツ反映の仕組みを構築。AWS S3へのアセット保管・配信とIAMによるアクセス権限制御を設計し、
               大容量3Dデータを安全かつ高速に配信する運用基盤を実現しました。3D表現技術とクラウドインフラを一貫して担当した、
               技術領域の広さを示す代表的な実績です。
             </p>
-            <ul class="project-points">
+            <ul class="project-card__points">
               <li>Matterport SDK × WebGL/3D要素とWeb標準UIのデータ同期・イベンティング設計</li>
+              <li>krpanoを用いた360°パノラマビューア（NAVI-PANO+ / QUICK-PANO）の開発</li>
               <li>AWS S3 / IAM によるアセット配信基盤の構築とアクセス権限の最適化</li>
               <li>PHPを用いたお問い合わせ・お申込み等のフォーム機能の作成</li>
               <li>CloudWatch Logs 等を用いたアクセス・エラーログの解析、障害原因調査</li>
             </ul>
-            <div class="tag-row">
-              <span class="tag">TypeScript</span><span class="tag">PHP</span><span class="tag">Matterport SDK</span><span class="tag">AWS S3</span><span class="tag">AWS IAM</span><span class="tag">WAI-ARIA</span><span class="tag">CMS連携</span>
+            <div class="tag-list">
+              <span class="tag">TypeScript</span><span class="tag">PHP</span><span class="tag">Matterport SDK</span><span class="tag">krpano</span><span class="tag">AWS S3</span><span class="tag">AWS IAM</span><span class="tag">WAI-ARIA</span><span class="tag">CMS連携</span>
             </div>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="project-media" data-tone="refactor">
-            <svg class="project-media-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <div class="project-card__media" data-tone="refactor">
+            <svg class="project-card__media-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M48 20a18 18 0 1 0 4 11"></path>
               <polyline points="48 8 48 20 36 20"></polyline>
             </svg>
           </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-period"><time datetime="2019-07">2019.07</time> – <time datetime="2024-03">2024.03</time></span>
-              <span class="project-company">株式会社サイポチ</span>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__period"><time datetime="2019-07">2019.07</time> – <time datetime="2024-03">2024.03</time></span>
+              <span class="project-card__company">株式会社サイポチ</span>
             </div>
             <h3>自社・クライアントWebサービスのフロントエンド刷新</h3>
             <p>
@@ -273,14 +280,14 @@
               バックエンドAPIとの通信層を構築し、肥大化したフロントエンドコードのコンポーネント分割・DOM操作の効率化により
               UIレスポンスを向上させました。
             </p>
-            <ul class="project-points">
+            <ul class="project-card__points">
               <li>Javaを用いたバックエンド機能の開発</li>
               <li>AWSを活用したインフラ構築・運用対応</li>
               <li>非同期データ取得のローディング・エラーハンドリングを共通化</li>
               <li>約5年にわたる継続的リファクタリングでコード保守性を改善</li>
             </ul>
-            <div class="tag-row">
-              <span class="tag">TypeScript</span><span class="tag">JavaScript (ES6+)</span><span class="tag">Java</span><span class="tag">PHP</span><span class="tag">AWS</span><span class="tag">Git</span>
+            <div class="tag-list">
+              <span class="tag">TypeScript</span><span class="tag">JavaScript (ES6+)</span><span class="tag">Java</span><span class="tag">PHP</span><span class="tag">AWS</span><span class="tag">Git/GitHub</span>
             </div>
           </div>
         </article>
@@ -290,12 +297,20 @@
   </section>
 
   <!-- WORKS (design / coding, supplementary) -->
-  <section class="section alt" id="works">
+  <section class="section section--alt" id="works">
     <div class="wrap">
-      <p class="section-kicker">04 / Works</p>
-      <h2 class="section-title">Web制作・コーディング実績</h2>
-      <p class="section-lead">Webデザイナー時代を含め、これまでにコーディング・レスポンシブ対応で携わった主な公式サイトです。</p>
-      <div class="works-grid">
+      <p class="section__kicker">04 / Works</p>
+      <h2 class="section__title">Web制作・コーディング実績</h2>
+      <p class="section__lead">Webデザイナー時代を含め、これまでにコーディング・レスポンシブ対応で携わった主な公式サイトです。</p>
+      <div class="works__grid">
+        <a class="work-item" href="https://locone.jp/" target="_blank" rel="noopener">
+          <img src="./assets/img/works/locone.png" alt="locone+" loading="lazy">
+          <span>locone+<em>コーディング・デザイン・PHP(Smarty)</em></span>
+        </a>
+        <a class="work-item" href="https://www.chugai-pharm.co.jp/" target="_blank" rel="noopener">
+          <img src="./assets/img/works/chugai.png" alt="中外製薬" loading="lazy">
+          <span>中外製薬<em>コーディング（レスポンシブ）</em></span>
+        </a>
         <a class="work-item" href="https://www.globalkomaba.c.u-tokyo.ac.jp/" target="_blank" rel="noopener">
           <img src="./assets/img/works/global-komaba.jpg" alt="Global Komaba" loading="lazy">
           <span>Global Komaba<em>コーディング（レスポンシブ）</em></span>
@@ -363,63 +378,63 @@
   <!-- CAREER -->
   <section class="section" id="career">
     <div class="wrap">
-      <p class="section-kicker">05 / Career</p>
-      <h2 class="section-title">Career Timeline</h2>
+      <p class="section__kicker">05 / Career</p>
+      <h2 class="section__title">Career Timeline</h2>
       <ol class="timeline">
         <li>
-          <div class="tl-period"><time datetime="2025-04">2025.04</time> – 現在</div>
-          <div class="tl-body">
+          <div class="timeline__period"><time datetime="2025-04">2025.04</time> – 現在</div>
+          <div class="timeline__body">
             <h3>株式会社デジタル・デザイナーズ・スタジオ</h3>
             <p>Webエンジニア / フロントエンドエンジニア ― TypeScript / PHP(Smarty) / Sass / Vite（別案件でReact・Next.js）</p>
           </div>
         </li>
         <li>
-          <div class="tl-period"><time datetime="2024-04">2024.04</time> – <time datetime="2025-03">2025.03</time></div>
-          <div class="tl-body">
+          <div class="timeline__period"><time datetime="2024-04">2024.04</time> – <time datetime="2025-03">2025.03</time>（正社員）</div>
+          <div class="timeline__body">
             <h3>株式会社アクトキューブ</h3>
-            <p>フロントエンドエンジニア ― Matterport SDK連携・AWSクラウド基盤開発</p>
+            <p>フロントエンドエンジニア ― Matterport SDK / krpano連携・AWSクラウド基盤開発（2025.04以降も業務委託でプロジェクト継続中）</p>
           </div>
         </li>
         <li>
-          <div class="tl-period"><time datetime="2019-07">2019.07</time> – <time datetime="2024-03">2024.03</time></div>
-          <div class="tl-body">
+          <div class="timeline__period"><time datetime="2019-07">2019.07</time> – <time datetime="2024-03">2024.03</time></div>
+          <div class="timeline__body">
             <h3>株式会社サイポチ</h3>
             <p>フロントエンドエンジニア / Webエンジニア ― 自社・クライアントサービス開発</p>
           </div>
         </li>
         <li>
-          <div class="tl-period"><time datetime="2016-08">2016.08</time> – <time datetime="2019-04">2019.04</time></div>
-          <div class="tl-body">
+          <div class="timeline__period"><time datetime="2016-08">2016.08</time> – <time datetime="2019-04">2019.04</time></div>
+          <div class="timeline__body">
             <h3>株式会社iCLIP</h3>
             <p>フロントエンドエンジニア ― WordPressカスタムテーマ修正、HTMLコーディング</p>
           </div>
         </li>
         <li>
-          <div class="tl-period"><time datetime="2014-06">2014.06</time> – <time datetime="2016-06">2016.06</time></div>
-          <div class="tl-body">
+          <div class="timeline__period"><time datetime="2014-06">2014.06</time> – <time datetime="2016-06">2016.06</time></div>
+          <div class="timeline__body">
             <h3>株式会社インターファクトリー</h3>
             <p>Webデザイナー / フロントエンド制作 ― 自社ECプラットフォームUI改修</p>
           </div>
         </li>
         <li>
-          <div class="tl-period"><time datetime="2012-01">2012.01</time> – <time datetime="2014-05">2014.05</time></div>
-          <div class="tl-body">
+          <div class="timeline__period"><time datetime="2012-01">2012.01</time> – <time datetime="2014-05">2014.05</time></div>
+          <div class="timeline__body">
             <h3>株式会社サイバーマーケティング</h3>
             <p>Webデザイナー ― CakePHPによる予約Webサービス構築</p>
           </div>
         </li>
         <li>
-          <div class="tl-period"><time datetime="2011-08">2011.08</time> – <time datetime="2011-12">2011.12</time></div>
-          <div class="tl-body">
+          <div class="timeline__period"><time datetime="2011-08">2011.08</time> – <time datetime="2011-12">2011.12</time></div>
+          <div class="timeline__body">
             <h3>株式会社サンセットコーポレイション</h3>
             <p>Webデザイナー ― ECサイト構築・デザイン制作</p>
           </div>
         </li>
         <li>
-          <div class="tl-period"><time datetime="2007-08">2007.08</time> – <time datetime="2011-03">2011.03</time></div>
-          <div class="tl-body">
+          <div class="timeline__period"><time datetime="2007-08">2007.08</time> – <time datetime="2011-03">2011.03</time></div>
+          <div class="timeline__body">
             <h3>株式会社バンダイナムコゲームス（あとらす二十一より派遣）</h3>
-            <p>制作アシスタント ― デバッグ・企画管理補助、データ制作</p>
+            <p>制作アシスタント ― デバッグ・企画管理補助</p>
           </div>
         </li>
       </ol>
@@ -427,15 +442,15 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="section alt" id="contact">
-    <div class="wrap contact-wrap">
-      <p class="section-kicker">06 / Contact</p>
-      <h2 class="section-title">Contact</h2>
-      <p class="section-lead">ご興味・ご相談等ございましたら、お気軽にメールにてご連絡ください。</p>
-      <a class="contact-email" href="mailto:kenswakaba@gmail.com">kenswakaba@gmail.com</a>
-      <div class="doc-links">
-        <a href="./resume.html" class="btn btn-ghost">履歴書を見る</a>
-        <a href="./career.html" class="btn btn-ghost">職務経歴書を見る</a>
+  <section class="section section--alt" id="contact">
+    <div class="wrap contact">
+      <p class="section__kicker">06 / Contact</p>
+      <h2 class="section__title">Contact</h2>
+      <p class="section__lead">ご興味・ご相談等ございましたら、お気軽にメールにてご連絡ください。</p>
+      <a class="contact__email" href="mailto:kenswakaba@gmail.com">kenswakaba@gmail.com</a>
+      <div class="contact__doc-links">
+        <a href="./resume.html" class="btn btn--ghost">履歴書を見る</a>
+        <a href="./career.html" class="btn btn--ghost">職務経歴書を見る</a>
       </div>
     </div>
   </section>
@@ -450,7 +465,7 @@
 </button>
 
 <footer class="site-footer" id="siteFooter">
-  <div class="wrap footer-inner">
+  <div class="wrap site-footer__inner">
     <span>&copy; <span id="year"></span> Ken Kawata</span>
   </div>
 </footer>
