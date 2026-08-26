@@ -165,7 +165,62 @@ a:hover { text-decoration: underline; }
   font-size: 0.85rem;
 }
 
+/* Tags / Archive */
+.tag-archive__heading {
+  font-size: 1.1rem;
+  margin: 40px 0 4px;
+  color: var(--text);
+}
+.tag-archive__heading:first-of-type { margin-top: 0; }
+.tag-archive__count { color: var(--text-faint); font-size: 0.85rem; font-weight: 400; }
+
+/* Post meta extras */
+.post__reading-time::before { content: "・"; color: var(--text-faint); }
+.post__tags { display: inline-flex; gap: 8px; }
+.post__tag {
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 2px 10px;
+  color: var(--text-dim);
+}
+.post__tag:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* Prev / next pager */
+.post__pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 56px;
+}
+.post__pager-link {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.post__pager-link:hover { border-color: var(--border-strong); text-decoration: none; }
+.post__pager-link span { font-size: 0.78rem; color: var(--text-faint); font-family: var(--font-mono); }
+.post__pager-link--next { grid-column: 2; text-align: right; align-items: flex-end; }
+.post__pager-link--prev:only-child { grid-column: 1; }
+
+/* Rouge syntax highlighting */
+.highlight { background: var(--bg-card); }
+.highlight .c, .highlight .cm, .highlight .c1 { color: var(--text-faint); font-style: italic; }
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .ow { color: var(--accent); }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .ss { color: #34d399; }
+.highlight .n, .highlight .na, .highlight .nb, .highlight .nx { color: var(--text); }
+.highlight .nc, .highlight .nf, .highlight .nd { color: var(--accent-2); }
+.highlight .nt { color: var(--accent-2); }
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: #fbbf24; }
+.highlight .o, .highlight .p { color: var(--text-dim); }
+.highlight .err { color: #f87171; }
+
 @media (max-width: 560px) {
   .blog-list__title, .post__title { font-size: 1.5rem; }
   .blog-main { padding: 32px 0 60px; }
+  .post__pager { grid-template-columns: 1fr; }
+  .post__pager-link--next { grid-column: 1; text-align: left; align-items: flex-start; }
 }

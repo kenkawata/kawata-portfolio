@@ -4,6 +4,9 @@ url: "https://kenkawata.github.io"
 baseurl: "/kawata-portfolio"
 
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 
 plugins:

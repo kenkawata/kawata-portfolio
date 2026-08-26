@@ -5,8 +5,11 @@ layout: default
   <header class="post__header">
     <p class="post__meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      {% assign words = content | strip_html | number_of_words %}
+      {% assign reading_time = words | divided_by: 400 | at_least: 1 %}
+      <span class="post__reading-time">読了時間: 約{{ reading_time }}分</span>
       {% if page.tags.size > 0 %}
-      <span class="post__tags">{% for tag in page.tags %}<span class="post__tag">{{ tag }}</span>{% endfor %}</span>
+      <span class="post__tags">{% for tag in page.tags %}<a class="post__tag" href="{{ '/blog/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>{% endfor %}</span>
       {% endif %}
     </p>
     <h1 class="post__title">{{ page.title }}</h1>
@@ -20,6 +23,13 @@ layout: default
   </div>
 
   <!-- アフィリエイトリンクを使う記事は、紹介ツール・書籍のリンクをこの位置にまとめる想定 -->
+
+  {% if page.previous or page.next %}
+  <nav class="post__pager">
+    {% if page.previous %}<a class="post__pager-link post__pager-link--prev" href="{{ page.previous.url | relative_url }}"><span>← 前の記事</span>{{ page.previous.title }}</a>{% endif %}
+    {% if page.next %}<a class="post__pager-link post__pager-link--next" href="{{ page.next.url | relative_url }}"><span>次の記事 →</span>{{ page.next.title }}</a>{% endif %}
+  </nav>
+  {% endif %}
 
   <footer class="post__footer">
     <a class="post__back" href="{{ '/blog/' | relative_url }}">← Blog一覧へ戻る</a>
