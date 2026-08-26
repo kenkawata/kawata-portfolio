@@ -1,0 +1,33 @@
+title: KAWATA.dev Blog
+description: "フロントエンドエンジニア河田健の技術ブログ。TypeScript・AWS・3D空間Webなどの実装メモを発信。"
+url: "https://kenkawata.github.io"
+baseurl: "/kawata-portfolio"
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules

@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post__header">
+    <p class="post__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      {% if page.tags.size > 0 %}
+      <span class="post__tags">{% for tag in page.tags %}<span class="post__tag">{{ tag }}</span>{% endfor %}</span>
+      {% endif %}
+    </p>
+    <h1 class="post__title">{{ page.title }}</h1>
+  </header>
+
+  <!-- AdSense等の広告タグを設置する場合はこの下に貼る（未設定のプレースホルダー） -->
+  <!-- <div class="post__ad-slot"></div> -->
+
+  <div class="post__body">
+    {{ content }}
+  </div>
+
+  <!-- アフィリエイトリンクを使う記事は、紹介ツール・書籍のリンクをこの位置にまとめる想定 -->
+
+  <footer class="post__footer">
+    <a class="post__back" href="{{ '/blog/' | relative_url }}">← Blog一覧へ戻る</a>
+  </footer>
+</article>
